@@ -1,0 +1,84 @@
+	  
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+.d3-vec { position:absolute; }
+
+/*
+.Oth {
+	stroke:#CBD0D5;
+	fill:none;
+}
+
+.Sho {
+	stroke:#E98730;
+	fill:none;
+}
+
+.Hom {
+	stroke: #48DCBC;
+	fill:none;
+}
+.Out {
+	stroke: #00AEDB;
+	fill:none;
+}
+.Nig {
+	stroke: #AA3325;
+	fill:none;
+}
+.Art {
+	stroke: #DD4A38;
+	fill:none;
+}
+.Tra {
+	stroke: #25AE90;
+	fill:none;
+}
+.Foo{
+	stroke:#EBB845;
+	fill:none;
+}
+.Col {
+	stroke: #44C5E7;
+	fill:none;
+}
+*/
+
+.Oth {
+	stroke:none;
+	fill:none;
+}
+
+.Sho {
+	stroke:#F05A6D;
+	fill:none;
+}
+
+.Hom {
+	stroke:#014F86;
+	fill:none;
+}
+.Out {
+	stroke:#7CCDC9;
+	fill:none;
+}
+.Nig {
+	stroke:#6C5B90;
+	fill:none;
+}
+.Art {
+	stroke:#473270;
+	fill:none;
+}
+.Tra {
+	stroke: #3EC1CA;
+	fill:none;
+}
+.Foo{
+	stroke:#E52639;
+	fill:none;
+}
+.Col {
+	stroke: #0095C7;
+	fill:none;
+}
