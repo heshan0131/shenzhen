@@ -82,3 +82,42 @@ body { margin:0; padding:0; }
 	stroke: #0095C7;
 	fill:none;
 }
+
+.a {
+	stroke:#F05A6D;
+	fill:#F05A6D;
+}
+/*new color set for different user id*/
+."1030338131" {
+	stroke:#F05A6D;
+	fill:none;
+}
+
+."1100505420" {
+	stroke:#014F86;
+	fill:none;
+}
+."1167916663" {
+	stroke:#7CCDC9;
+	fill:none;
+}
+."1450480397" {
+	stroke:#6C5B90;
+	fill:none;
+}
+.'1480860900' {
+	stroke:#473270;
+	fill:none;
+}
+.'1791984341' {
+	stroke: #3EC1CA;
+	fill:none;
+}
+.1808472122 {
+	stroke:#E52639;
+	fill:none;
+}
+.1821824014 {
+	stroke: #0095C7;
+	fill:none;
+}

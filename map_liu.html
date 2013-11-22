@@ -36,9 +36,11 @@ function d3layer() {
 
     f.parent = div.node();
 
-    f.project = function(lat, lon) {
-      var point = f.map.locationPoint({ lat: lat, lon: lon });
-      return [point.x, point.y];
+    f.project = function(lat1, lon1, lat2, lon2) {
+      var point1 = f.map.locationPoint({ lat: lat1, lon: lon1 });
+      var point2 = f.map.locationPoint({ lat: lat2, lon: lon2 });
+      return [point1.x, point1.y];
+      
     };
 
     var first = true;
@@ -47,20 +49,20 @@ function d3layer() {
           .attr("height", f.map.dimensions.y)
           .style("margin-left", "0px")
           .style("margin-top", "0px") && (first = false);
-        // here is where things need to be handled according to the geometry
-        // type. paths and points would be handled differently
-        // I need to understand this in detail
-        // geopath = d3.geo.path().projection(layer.project);
-        // feature is a d3 selection
-
-        var coords = function(d){ 
-            return f.project(d.lat_event, d.lng_event);};
-        feature.attr('cy', function(d){ return coords(d)[1];});
-        feature.attr('cx', function(d){ return coords(d)[0];});
-        feature.attr('r', function(d){ return 4});//change the size
-        feature.attr("class", function(d) {return d.category2.substring(0,3);});
-        feature.style("opacity", 0.5);
-        feature.style("stroke-width",2);
+	        // here is where things need to be handled according to the geometry
+	        // type. paths and points would be handled differently
+	        // I need to understand this in detail
+	        // geopath = d3.geo.path().projection(layer.project);
+	        // feature is a d3 selection
+	    var coords = function(d){ 
+	        return f.project(d.lat_event, d.lng_event);}    
+	        .delay(1);
+	    feature.attr('cy', function(d){ return coords(d)[1];});
+	    feature.attr('cx', function(d){ return coords(d)[0];});
+	    feature.attr('r', function(d){ return 4;});//change the size
+	    feature.attr("class", 'a');
+	    feature.style("opacity", 0.1);
+	        // feature.style("stroke-width",2);
     };
 
     f.data = function(x) {
@@ -106,21 +108,24 @@ function d3layer() {
 			console.log(hour * 3600 + minu * 60 + secd);
 	}
 	
+
 	function showDots(){
 		var t = svg.selectAll("circle")
-			.transition()
-			.delay(function(d){return parseTime(d.created_time)/3;})
-			.duration(2000)
-			.attr('r', 12)
-			.style("opacity", 1);
-		
+			// .transition()
+			// .delay(function(d){return parseTime(d.created_time)/3;})
+			// .duration(2000)
+			// .attr('r', 4)
+			// .style("opacity", 0.2);
+		/*
 		var t1 = svg.selectAll("circle")
 			.transition()
 			.delay(function(d){return parseTime(d.created_time)/3 +2000;})
 			.duration(2000)
 			.attr('r', 7)
-			.style("opacity", 0.5);		
+			.style("opacity", 0.5);	
+			*/	
 	}
+
     return f;
     
 }
