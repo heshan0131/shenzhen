@@ -55,11 +55,10 @@ function d3layer() {
 	        // geopath = d3.geo.path().projection(layer.project);
 	        // feature is a d3 selection
 	    var coords = function(d){ 
-	        return f.project(d.lat_event, d.lng_event);}    
-	        .delay(1);
+	        return f.project(d.lat_event, d.lng_event);};
 	    feature.attr('cy', function(d){ return coords(d)[1];});
 	    feature.attr('cx', function(d){ return coords(d)[0];});
-	    feature.attr('r', function(d){ return 4;});//change the size
+	    feature.attr('r', function(d){ return 4;});
 	    feature.attr("class", 'a');
 	    feature.style("opacity", 0.1);
 	        // feature.style("stroke-width",2);
