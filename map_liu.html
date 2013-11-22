@@ -128,7 +128,7 @@ function d3layer() {
 
 $(window).ready(function(){
 	mapbox.auto('map', 'heshan0131.gb2go124', function(map) {
-	  d3.csv("data/Aug_30_2013.csv", function(data){
+	  d3.csv("data/q_checks_above_10_november.csv", function(data){
 	  	 	
 	    l = d3layer().data(data);
 	    map.addLayer(l);
