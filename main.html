@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>ShenZhen</title>
+	<script src="http://d3js.org/d3.v2.min.js?2.8.1"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+  	<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+  	<script src='js/main.js'></script>
+  	<script src='js/emerge.js'></script>
+  	<script src='js/collide.js'></script>
+  	<script src='js/stream.js'></script>  	
+  	<script src='js/journey.js'></script>  	
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css">
+	<link rel="stylesheet" href="css/jquery-ui.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	
+	
+</head>
+<body>
+	<div id='map' style='height:720px;'></div>
+	<div id="bottom">
+		<div id="time"></div>		
+		<div id="date"></div>
+	</div>
+	<div id='overlay'></div>
+	<div id='top'>
+		<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html"><img src='image/logo.png'></a>
+		<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html#about"><span class='btn menu' id='btn-about'>About</span></a>
+		<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html#team"><span class='btn menu' id='btn-team'>Team</span></a>		
+	</div>
+	<div id='middle'>
+		<img id='img-left' src='image/rings-r.svg'>
+
+		<img id='img-right' src='image/rings-l.svg'>
+		
+	</div>
+	
+			<div id='window-project'>
+				<img src='image/logo.png'>
+				<p id="about">Shenzhen @pulse presents an exploration of urban mobility and human activity in downtown Shenzhen, through visualizing social media data from @weibo. The city talks to us through the @weibo check-ins of its dwellers. Shenzhen is a sound box where individual behaviors become amplified. These behaviors form collective patterns, which are traceable only at the global scale of the city, allowing us to identify the areas where human activity concentrates, and the areas that become connected by travelers’ mobility across the city. We invite you to join us as we explore Shenzhen’s digital pulse through four unique lenses. </p>
+				<p id="team" style="display:none">We are three graduate students at MIT School of Architecture + Planning. This is our class project for <i> 11.S947 Visualizing Shenzhen's Social Media to Understand City Dynamics </i>. 
+					This project is also currently exhibiting at the 2013 Shenzhen Biennale.<br><br>
+					<b>Shan He</b>, SMArchS in Design and Computation, <a href="mailto:shanhe@mit.edu"><i>shanhe@mit.edu</i></a><br><br>
+					<b>Liu Liu</b>, Master in City Planning, <a href="mailto:lyons66@mit.edu"><i>lyons66@mit.edu</i></a><br><br>
+					<b>Roberto Ponce Lopez</b>, PHD in City Planning, <a href="mailto:rponcelo@mit.edu"><i>rponcelo@mit.edu</i></a>
+				</p>			
+			</div>			
+			<div id='window-lense'>
+				<ul id='lenses'>
+					<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html#emerge">
+					<li class='lense' id="li-emerge">
+						<img src='image/lense-em.svg'>
+						<div class='title'>Emerge</div>
+					</li></a>
+					<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html#collide">
+					<li class='lense' id="li-collide">
+						<img src='image/lense-co.svg'>
+						<div class='title'>Collide</div>
+					</li></a>
+					<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html#stream">
+					<li class='lense' id="li-stream">
+						<img src='image/lense-st.svg'>
+						<div class='title'>Stream</div>
+					</li></a>
+					<a href="http://shanhe.scripts.mit.edu/shenzhen/main.html#journey">
+					<li class='lense' id="li-journey">
+						<img src='image/lense-jo.svg'>
+						<div class='title'>Journey</div>
+					</li></a>										
+				</ul>
+			</div>
+			<div id='window-desc'>
+				<span id='desc'></span>
+				<span id='desc-1' style='visibility:hidden'>One day of weibo check-ins display on a map based on time posted</span>
+				<span id='desc-2' style='visibility:hidden'>One day of weibo check-ins group by their category</span>
+				<span id='desc-3' style='visibility:hidden'>Hourly weibo check-ins per category over one day</span>
+				<span id='desc-4' style='visibility:hidden'>A week of check-ins of most frequent users showing their journey</span>
+			</div>
+			<div id='sidebar'></div>						
+		
+	
+</body>
+</html>
